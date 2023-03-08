@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A5EDF19D-9EC5-44A6-8DE1-E9EFBC45DEE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroTicketing.Core", "MetroTicketing.Core\MetroTicketing.Core.csproj", "{D6F1372D-A519-453E-8723-6E7F6B266D6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroTicketing.Application", "MetroTicketing.Application\MetroTicketing.Application.csproj", "{4D3C5322-CAA8-4EF7-A021-BE08180EAC21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroTicketing.Infrastructure", "MetroTicketing.Infrastructure\MetroTicketing.Infrastructure.csproj", "{7121B5FB-D53A-4B25-B10E-B63CCED090FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroTicketing.API", "MetroTicketing.API\MetroTicketing.API.csproj", "{918CE859-1199-43FF-8459-0F3B90215073}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6F1372D-A519-453E-8723-6E7F6B266D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6F1372D-A519-453E-8723-6E7F6B266D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6F1372D-A519-453E-8723-6E7F6B266D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6F1372D-A519-453E-8723-6E7F6B266D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D3C5322-CAA8-4EF7-A021-BE08180EAC21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D3C5322-CAA8-4EF7-A021-BE08180EAC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D3C5322-CAA8-4EF7-A021-BE08180EAC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D3C5322-CAA8-4EF7-A021-BE08180EAC21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7121B5FB-D53A-4B25-B10E-B63CCED090FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7121B5FB-D53A-4B25-B10E-B63CCED090FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7121B5FB-D53A-4B25-B10E-B63CCED090FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7121B5FB-D53A-4B25-B10E-B63CCED090FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{918CE859-1199-43FF-8459-0F3B90215073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{918CE859-1199-43FF-8459-0F3B90215073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{918CE859-1199-43FF-8459-0F3B90215073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{918CE859-1199-43FF-8459-0F3B90215073}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D6F1372D-A519-453E-8723-6E7F6B266D6F} = {A5EDF19D-9EC5-44A6-8DE1-E9EFBC45DEE6}
+		{4D3C5322-CAA8-4EF7-A021-BE08180EAC21} = {A5EDF19D-9EC5-44A6-8DE1-E9EFBC45DEE6}
+		{7121B5FB-D53A-4B25-B10E-B63CCED090FC} = {A5EDF19D-9EC5-44A6-8DE1-E9EFBC45DEE6}
+		{918CE859-1199-43FF-8459-0F3B90215073} = {A5EDF19D-9EC5-44A6-8DE1-E9EFBC45DEE6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14F89A8B-88E2-4000-8E5D-230818E7B86D}
+	EndGlobalSection
+EndGlobal
