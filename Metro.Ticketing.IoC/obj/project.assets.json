@@ -1090,7 +1090,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Metro.Ticketing.Domain": "1.0.0"
+          "Metro.Ticketing.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.3"
         },
         "compile": {
           "bin/placeholder/Metro.Ticketing.Infrastructure.dll": {}
