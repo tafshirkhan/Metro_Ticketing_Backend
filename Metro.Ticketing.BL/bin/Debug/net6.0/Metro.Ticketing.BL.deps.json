@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Metro.Ticketing.BL/1.0.0": {
+        "dependencies": {
+          "Metro.Ticketing.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "Metro.Ticketing.BL.dll": {}
+        }
+      },
+      "Metro.Ticketing.Domain/1.0.0": {
+        "runtime": {
+          "Metro.Ticketing.Domain.dll": {}
+        }
+      },
+      "Metro.Ticketing.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Metro.Ticketing.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Metro.Ticketing.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Metro.Ticketing.BL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Metro.Ticketing.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Metro.Ticketing.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

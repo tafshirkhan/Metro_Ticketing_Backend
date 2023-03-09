@@ -1,0 +1,12 @@
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.Domain\bin\Debug\net6.0\Metro.Ticketing.Domain.deps.json
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.Domain\bin\Debug\net6.0\Metro.Ticketing.Domain.dll
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.Domain\bin\Debug\net6.0\Metro.Ticketing.Domain.pdb
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.Domain\obj\Debug\net6.0\Metro.Ticketing.Domain.csproj.AssemblyReference.cache
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.Domain\obj\Debug\net6.0\Metro.Ticketing.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.Domain\obj\Debug\net6.0\Metro.Ticketing.Domain.AssemblyInfoInputs.cache
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.Domain\obj\Debug\net6.0\Metro.Ticketing.Domain.AssemblyInfo.cs
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.Domain\obj\Debug\net6.0\Metro.Ticketing.Domain.csproj.CoreCompileInputs.cache
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.Domain\obj\Debug\net6.0\Metro.Ticketing.Domain.dll
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.Domain\obj\Debug\net6.0\refint\Metro.Ticketing.Domain.dll
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.Domain\obj\Debug\net6.0\Metro.Ticketing.Domain.pdb
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.Domain\obj\Debug\net6.0\ref\Metro.Ticketing.Domain.dll

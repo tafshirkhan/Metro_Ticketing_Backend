@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "3cCTaOmPbGFMyrKjlHi2um6fkuLAo+uwpkhg0QQaAGg=",
+  "Source": "Metro.Ticketing.API",
+  "BasePath": "_content/Metro.Ticketing.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
