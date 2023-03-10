@@ -1,4 +1,5 @@
-﻿using Metro.Ticketing.Infrastructure.IUnitOfWork;
+﻿using Metro.Ticketing.DAL.UnitOfWork;
+using Metro.Ticketing.Infrastructure.IUnitOfWork;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;

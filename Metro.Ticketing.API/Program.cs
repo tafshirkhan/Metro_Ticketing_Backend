@@ -12,6 +12,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDatabaseConfig(configuration);
+builder.Services.AddUnitOfWork(configuration);
+builder.Services.AddAutomapper(configuration);
+builder.Services.AddBusiness(configuration);
 
 var app = builder.Build();
 

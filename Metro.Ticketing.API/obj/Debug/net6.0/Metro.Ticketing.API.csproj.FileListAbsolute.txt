@@ -90,3 +90,5 @@ D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.API\obj\Debug\net6.0\refint\Metro
 D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.API\obj\Debug\net6.0\Metro.Ticketing.API.pdb
 D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.API\obj\Debug\net6.0\Metro.Ticketing.API.genruntimeconfig.cache
 D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.API\obj\Debug\net6.0\ref\Metro.Ticketing.API.dll
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.API\bin\Debug\net6.0\AutoMapper.dll
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
