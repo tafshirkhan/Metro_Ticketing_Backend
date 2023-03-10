@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Metro.Ticketing.Domain.RequestDTO;
+using Metro.Ticketing.Domain.RequestDTO.Train;
 using Metro.Ticketing.Domain.ResponseDTO;
+using Metro.Ticketing.Domain.ResponseDTO.Train;
 using MetroTicketing.System.Entities;
 using System;
 using System.Collections.Generic;
@@ -18,6 +20,12 @@ namespace Metro.Ticketing.DAL.AutoMapperProfile
             CreateMap<CreateUserDTO, User>().ReverseMap();
             CreateMap<User, EditUserDTO>().ReverseMap();
             CreateMap<User, UserInfoResponseDTO>().ReverseMap();
+
+            CreateMap<Train, GetAllTrainDTO>().ReverseMap();
+            CreateMap<Train, CreateTrainDTO>().ReverseMap();
+            CreateMap<Train, EditTrainDTO>().ReverseMap();
+            CreateMap<Train, TrainInfoResponseDTO>().ReverseMap();
+
 
         }
     }

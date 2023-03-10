@@ -14,6 +14,7 @@ namespace Metro.Ticketing.IoC
         public static IServiceCollection AddBusiness(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<UserBusiness>();
+            services.AddScoped<TrainBusiness>();
             return services;
         }
     }
