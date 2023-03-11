@@ -22,7 +22,6 @@ namespace MetroTicketing.System.Entities
         public double Fare { get; set; }
 
         [Column(TypeName = "varchar(20)")]
-        [Required(ErrorMessage = "The train status cannot be empty.")]
         public string TransactionStatus { get; set; }
         public ICollection<Ticket> tickets { get; set; }
     }
