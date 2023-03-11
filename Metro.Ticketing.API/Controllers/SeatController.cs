@@ -47,5 +47,15 @@ namespace Metro.Ticketing.API.Controllers
             _seatBusiness.InsertSeat(seat);
             return Ok();
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteSeat(Guid id)
+        {
+            if (id == null)
+                return BadRequest();
+            else
+                _seatBusiness.DeleteSeat(id);
+            return Ok();
+        }
     }
 }

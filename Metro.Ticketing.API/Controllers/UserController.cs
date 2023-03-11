@@ -46,7 +46,7 @@ namespace Metro.Ticketing.API.Controllers
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteUser(Guid id)
         {
             if (id == null)

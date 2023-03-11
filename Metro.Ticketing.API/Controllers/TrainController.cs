@@ -48,7 +48,7 @@ namespace Metro.Ticketing.API.Controllers
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteTrain(Guid id)
         {
             if (id == null)

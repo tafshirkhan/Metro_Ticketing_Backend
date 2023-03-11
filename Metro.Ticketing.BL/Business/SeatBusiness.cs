@@ -59,5 +59,15 @@ namespace Metro.Ticketing.BL.Business
                 return false;
             }
         }
+
+        public void DeleteSeat(Guid seatId)
+        {
+            var seat = GetSeatById(seatId);
+            if (seat != null)
+            {
+                _unitOfWork.SeatRepository.Delete(seatId);
+                _unitOfWork.Save();
+            }
+        }
     }
 }
