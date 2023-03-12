@@ -18,6 +18,7 @@ namespace Metro.Ticketing.IoC
             services.AddScoped<SeatBusiness>();
             services.AddScoped<PassengerBusiness>();
             services.AddScoped<BankCredentialBusiness>();
+            services.AddScoped<BookingBusiness>();
             return services;
         }
     }
