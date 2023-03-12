@@ -20,6 +20,7 @@ namespace Metro.Ticketing.IoC
             services.AddScoped<BankCredentialBusiness>();
             services.AddScoped<BookingBusiness>();
             services.AddScoped<TicketBusiness>();
+            services.AddScoped<TransactionBusiness>();
             return services;
         }
     }

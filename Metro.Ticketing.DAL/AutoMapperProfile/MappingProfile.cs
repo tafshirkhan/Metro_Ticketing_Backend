@@ -6,6 +6,7 @@ using Metro.Ticketing.Domain.RequestDTO.Passenger;
 using Metro.Ticketing.Domain.RequestDTO.Seat;
 using Metro.Ticketing.Domain.RequestDTO.Ticket;
 using Metro.Ticketing.Domain.RequestDTO.Train;
+using Metro.Ticketing.Domain.RequestDTO.Transaction;
 using Metro.Ticketing.Domain.ResponseDTO;
 using Metro.Ticketing.Domain.ResponseDTO.BankCredential;
 using Metro.Ticketing.Domain.ResponseDTO.Booking;
@@ -13,6 +14,7 @@ using Metro.Ticketing.Domain.ResponseDTO.Passenger;
 using Metro.Ticketing.Domain.ResponseDTO.Seat;
 using Metro.Ticketing.Domain.ResponseDTO.Ticket;
 using Metro.Ticketing.Domain.ResponseDTO.Train;
+using Metro.Ticketing.Domain.ResponseDTO.Transaction;
 using MetroTicketing.System.Entities;
 using System;
 using System.Collections.Generic;
@@ -59,7 +61,12 @@ namespace Metro.Ticketing.DAL.AutoMapperProfile
             CreateMap<Ticket, GetAllTicketDTO>().ReverseMap();
             CreateMap<CreateTicketDTO, Ticket>().ReverseMap();
             CreateMap<Ticket, EditTicketDTO>().ReverseMap();
-            CreateMap<Ticket, TicketInfoResponseDTO>().ReverseMap()
+            CreateMap<Ticket, TicketInfoResponseDTO>().ReverseMap();
+
+           CreateMap<Transaction, GetAllTransactionDTO>().ReverseMap();
+           CreateMap<CreateTransactionDTO, Transaction>().ReverseMap();
+           CreateMap<Transaction, EditTransactionDTO>().ReverseMap();
+           CreateMap<Transaction, TransactionInfoResponseDTO>().ReverseMap()
 ;
         }
     }
