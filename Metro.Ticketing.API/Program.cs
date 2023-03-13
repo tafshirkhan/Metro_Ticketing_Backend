@@ -1,5 +1,8 @@
 using Metro.Ticketing.IoC;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
@@ -17,6 +20,23 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader()
     );
 });
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(x =>
+{
+    x.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = "localhost",
+        ValidAudience = "localhost",
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["jwtConfig:key"])),
+        ClockSkew = TimeSpan.Zero
+    };
+});
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -36,6 +56,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("CorsPolicy");
+app.UseAuthentication();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
