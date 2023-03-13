@@ -1,6 +1,7 @@
 ﻿using Metro.Ticketing.BL.Business;
 using Metro.Ticketing.Domain.RequestDTO;
 using Metro.Ticketing.Domain.ResponseDTO;
+using MetroTicketing.System.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,7 +40,7 @@ namespace Metro.Ticketing.API.Controllers
             return Ok(_userBusiness.UpdateUser(user));
         }
 
-        [HttpPost]
+        [HttpPost("CreateUser")]
         public IActionResult Adduser(CreateUserDTO user)
         {
             _userBusiness.InsertUser(user);
@@ -54,6 +55,17 @@ namespace Metro.Ticketing.API.Controllers
             else
                 _userBusiness.DeleteUser(id);
             return Ok();
+        }
+
+        [HttpPost("LoginUser")]
+        public IActionResult Login(Login user)
+        {
+            var userExist = _userBusiness.GetUserByEmailPass(user.Email);
+            if(userExist != null && user.Password == user.Password)
+            {
+                return Ok("Success");
+            }
+            return Ok("Login failed");
         }
     }
 }

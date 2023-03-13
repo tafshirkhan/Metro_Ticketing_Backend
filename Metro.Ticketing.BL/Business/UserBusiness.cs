@@ -30,6 +30,7 @@ namespace Metro.Ticketing.BL.Business
         public UserInfoResponseDTO GetUserById(Guid userId)
         {
             var user = _unitOfWork.UserRepository.Get(u => u.UserId == userId);
+           
             var userDto = _mapper.Map<UserInfoResponseDTO>(user);
             return userDto;
         }
@@ -71,6 +72,14 @@ namespace Metro.Ticketing.BL.Business
                 _unitOfWork.UserRepository.Delete(userId);
                 _unitOfWork.Save();
             }
+        }
+
+        public UserInfoResponseDTO GetUserByEmailPass(string email)
+        {
+            var user = _unitOfWork.UserRepository.Get(u => u.Email == email);
+            var userDto = _mapper.Map<UserInfoResponseDTO>(user);
+            return userDto;
+
         }
 
     }
