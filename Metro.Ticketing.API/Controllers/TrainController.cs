@@ -3,6 +3,7 @@ using Metro.Ticketing.Domain.RequestDTO;
 using Metro.Ticketing.Domain.RequestDTO.Train;
 using Metro.Ticketing.Domain.ResponseDTO;
 using Metro.Ticketing.Domain.ResponseDTO.Train;
+using MetroTicketing.System.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -56,6 +57,12 @@ namespace Metro.Ticketing.API.Controllers
             else
                 _trainBusiness.DeleteTrain(id);
             return Ok();
+        }
+
+        [HttpGet("SearchTrain")]
+        public IEnumerable<SearchTrain> GetTrainBySearching(string arrivalStation, string departureStation, DateTime date)
+        {
+            return _trainBusiness.GetTrainBySearching(arrivalStation, departureStation, date);
         }
     }
 }

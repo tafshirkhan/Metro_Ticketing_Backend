@@ -4,6 +4,7 @@ using Metro.Ticketing.Domain.RequestDTO.Passenger;
 using Metro.Ticketing.Domain.RequestDTO.Ticket;
 using Metro.Ticketing.Domain.ResponseDTO.Booking;
 using Metro.Ticketing.Domain.ResponseDTO.Ticket;
+using MetroTicketing.System.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -53,6 +54,12 @@ namespace Metro.Ticketing.API.Controllers
         public IActionResult SaveTicket(Guid passengerId, Guid bookingId, Guid trainId)
         {
             return Ok(_ticketBusiness.SaveTicket(passengerId,bookingId, trainId));
+        }
+
+        [HttpGet("GetTicket")]
+        public IEnumerable<TicketDetails> GetTicket(Guid passengerId, Guid bookingId, Guid trainId)
+        {
+            return _ticketBusiness.GetTicket(passengerId,bookingId,trainId);
         }
     }
 }

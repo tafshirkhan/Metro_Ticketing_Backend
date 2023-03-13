@@ -70,6 +70,31 @@ namespace Metro.Ticketing.BL.Business
             }
         }
 
+        public IEnumerable<SearchTrain> GetTrainBySearching(string arrivalStation, string departureStation, DateTime date)
+        {
+            var train = _unitOfWork.TrainRepository.GetAll();
+            var seat = _unitOfWork.SeatRepository.GetAll();
+
+            var searchResult = (
+                from t in train
+                join s in seat on t.TrainId equals s.TrainId
+                select new SearchTrain
+                { 
+                    TrainId = t.TrainId,
+                    TrainName = t.Name,
+                    ArrivalTime = t.ArrivalTime,
+                    DepartureTime = t.DepartureTime,
+                    ArrivalDate = t.ArrivalDate,
+                    DepartureDate = t.DepartureDate,
+                    DepartureStation = t.DepartureStation,
+                    ArrivalStation = t.ArrivalStation,
+                    Distance = t.Distance,
+                    Total = s.Total
+                }).ToList().Where(p => p.ArrivalStation == arrivalStation && p.DepartureStation == departureStation && p.DepartureDate == date);
+            
+            return searchResult;
+        }
+
 
     }
 }

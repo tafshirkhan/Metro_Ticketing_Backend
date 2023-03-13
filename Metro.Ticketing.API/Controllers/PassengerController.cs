@@ -3,6 +3,7 @@ using Metro.Ticketing.Domain.RequestDTO.Passenger;
 using Metro.Ticketing.Domain.RequestDTO.Seat;
 using Metro.Ticketing.Domain.ResponseDTO.Passenger;
 using Metro.Ticketing.Domain.ResponseDTO.Seat;
+using MetroTicketing.System.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -57,6 +58,12 @@ namespace Metro.Ticketing.API.Controllers
             else
                 _passengerBusiness.DeletePassenger(id);
             return Ok();
+        }
+
+        [HttpGet("GetReport")]
+        public IEnumerable<Report> GetReport(Guid trainId)
+        {
+            return _passengerBusiness.GetReport(trainId);
         }
     }
 }

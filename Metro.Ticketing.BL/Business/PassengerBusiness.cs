@@ -5,6 +5,7 @@ using Metro.Ticketing.Domain.ResponseDTO.Passenger;
 using Metro.Ticketing.Domain.ResponseDTO.Seat;
 using Metro.Ticketing.Infrastructure.IUnitOfWork;
 using MetroTicketing.System.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -68,6 +69,49 @@ namespace Metro.Ticketing.BL.Business
                 _unitOfWork.PassengerRepository.Delete(passengerId);
                 _unitOfWork.Save();
             }
+        }
+
+        //[HttpGet("GetrolesCompletos")]
+        //public async Task<IActionResult> GetRolesCompletos()
+        //{
+        //    IQueryable<Rol> rol = await _unitOfWork.Rol.GetAll();
+        //    IQueryable<PermisoEnRol> permisosenrol = await _unitOfWork.PermisosEnRol.GetAll();
+        //    IQueryable<Permiso> permiso = await _unitOfWork.Permiso.GetAll();
+        //    var query = from r in rol
+        //                join pr in permisosenrol on r.IdRol equals pr.Idrol
+        //                join p in permiso on pr.IdPermiso equals p.IdPermiso
+        //                select new
+        //                {
+        //                    rol = r,
+        //                    permisosenrol = pr,
+        //                    permiso = p
+        //                };
+        //    var result = query.ToList();
+        //    return Ok(result);
+        //}
+
+        public IEnumerable<Report> GetReport(Guid trainId)
+        {
+            var passenger = _unitOfWork.PassengerRepository.GetAll();
+            var booking = _unitOfWork.BookingRepository.GetAll();
+            var reportDetails = (
+                from p in passenger
+                join b in booking on p.PassengerId equals b.PassengerId
+                where b.TrainId == trainId
+                select new Report
+                { 
+                    PassengerId = p.PassengerId,
+                    PassengerName = p.PassengerName,
+                    Age = p.Age,
+                    Gender = p.Gender,
+                    BookingId = b.BookingId,
+                    Fare = b.Fare,
+                    Date = b.Date,
+                    Status = b.Status,
+                    SeatNum = b.SeatNum  
+                }).ToList();
+            return reportDetails;
+                
         }
     }
 }

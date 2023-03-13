@@ -83,19 +83,36 @@ namespace Metro.Ticketing.BL.Business
             return code;
         }
 
-        //public IEnumerable<TicketDetails> GetTicket(Guid passengerId, Guid bookingId, Guid trainId)
-        //{
-        //    List<TicketDetails> ticketDetails;
+        public IEnumerable<TicketDetails> GetTicket(Guid passengerId, Guid bookingId, Guid trainId)
+        {
+            var passenger = _unitOfWork.PassengerRepository.GetAll();
+            var booking = _unitOfWork.BookingRepository.GetAll();
+            var train = _unitOfWork.TrainRepository.GetAll();
 
-        //    var p = _unitOfWork.PassengerRepository.Get(p => p.PassengerId == passengerId);
-        //    var b = _unitOfWork.BookingRepository.Get(b => b.BookingId == bookingId);
-        //    var t = _unitOfWork.TicketRepository.Get(t => t.TrainId == trainId);
-
-        //    ticketDetails = (from pa in _unitOfWork.PassengerRepository
-        //                     join bo in _unitOfWork.BookingRepository on )
-            
-                             
-        //    return 0;
-        //}
+           var ticketDetails = (
+                from p in passenger
+                join b in booking on p.PassengerId equals b.PassengerId
+                join t in train on b.TrainId equals t.TrainId
+                select new TicketDetails 
+                { 
+                    TrainId = t.TrainId,
+                    ArrivalDate = t.ArrivalDate,
+                    DepartureTime = t.DepartureTime,
+                    ArrivalTime = t.ArrivalTime,
+                    DepartureDate = t.DepartureDate,
+                    ArrivalStation = t.ArrivalStation,
+                    DepartureStation = t.DepartureStation,
+                    BookingId = b.BookingId,
+                    Fare = b.Fare,
+                    Status = b.Status,
+                    SeatNum = b.SeatNum,
+                    PassengerId = b.PassengerId,
+                    PassengerName = p.PassengerName,
+                    Age = p.Age,
+                    Gender = p.Gender
+                }).ToList().Where(n => n.PassengerId == passengerId && n.BookingId == bookingId && n.TrainId == trainId);
+              
+            return ticketDetails;
+        }
     }
 }
