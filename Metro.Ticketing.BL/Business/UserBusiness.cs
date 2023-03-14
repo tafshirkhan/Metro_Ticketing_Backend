@@ -74,7 +74,15 @@ namespace Metro.Ticketing.BL.Business
             }
         }
 
-        public UserInfoResponseDTO GetUserByEmailPass(string email)
+        public UserInfoResponseDTO GetUserByEmailPass(string email, string pass)
+        {
+            var user = _unitOfWork.UserRepository.Get(u => u.Email == email && u.Password == pass);
+            var userDto = _mapper.Map<UserInfoResponseDTO>(user);
+            return userDto;
+
+        }
+
+        public UserInfoResponseDTO GetUserByEmail(string email)
         {
             var user = _unitOfWork.UserRepository.Get(u => u.Email == email);
             var userDto = _mapper.Map<UserInfoResponseDTO>(user);

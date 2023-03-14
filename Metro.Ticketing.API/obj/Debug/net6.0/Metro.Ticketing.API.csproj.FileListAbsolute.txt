@@ -92,3 +92,4 @@ D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.API\obj\Debug\net6.0\Metro.Ticket
 D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.API\obj\Debug\net6.0\ref\Metro.Ticketing.API.dll
 D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.API\bin\Debug\net6.0\AutoMapper.dll
 D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\E-TICKETING\Metro.Ticketing\Metro.Ticketing.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

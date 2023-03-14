@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uhGDmyXvyS64Qj+zYY7C4aM0QJOVqxo+uqldpEzjsrvJB2C3xrsB5guhj1hK7dSw8Vue9VCRP+KwI9jB4V28dQ==",
+  "dgSpecHash": "iOvNrPEAfMJUyzpzoElYwZp9g765sMQpgrFvNyslLtJDF0++imY6dwn0Y1Uc3n6aIc1b8hjlHT/L44ovHdi8Vg==",
   "success": true,
   "projectFilePath": "D:\\E-TICKETING\\Metro.Ticketing\\Metro.Ticketing.BL\\Metro.Ticketing.BL.csproj",
   "expectedPackageFiles": [
@@ -12,13 +12,26 @@
     "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.3\\microsoft.entityframeworkcore.analyzers.7.0.3.nupkg.sha512",
     "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
-    "C:\\Users\\Tafsir\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.27.0\\microsoft.identitymodel.abstractions.6.27.0.nupkg.sha512",
+    "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.27.0\\microsoft.identitymodel.jsonwebtokens.6.27.0.nupkg.sha512",
+    "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.identitymodel.logging\\6.27.0\\microsoft.identitymodel.logging.6.27.0.nupkg.sha512",
+    "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.27.0\\microsoft.identitymodel.tokens.6.27.0.nupkg.sha512",
+    "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Tafsir\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Tafsir\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.27.0\\system.identitymodel.tokens.jwt.6.27.0.nupkg.sha512",
+    "C:\\Users\\Tafsir\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Tafsir\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Tafsir\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "C:\\Users\\Tafsir\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\Tafsir\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
+    "C:\\Users\\Tafsir\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
   ],
   "logs": []
 }

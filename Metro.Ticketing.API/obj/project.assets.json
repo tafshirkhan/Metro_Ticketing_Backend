@@ -1424,6 +1424,11 @@
       "Metro.Ticketing.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Microsoft.IdentityModel.Tokens": "6.27.0",
+          "System.IdentityModel.Tokens.Jwt": "6.27.0"
+        },
         "compile": {
           "bin/placeholder/Metro.Ticketing.Domain.dll": {}
         },
