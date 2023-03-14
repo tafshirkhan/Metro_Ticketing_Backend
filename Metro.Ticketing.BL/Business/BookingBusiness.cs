@@ -105,11 +105,13 @@ namespace Metro.Ticketing.BL.Business
             if(booking != null)
             {
                 booking.Status = "CONFIRM";
-                _unitOfWork.TransactionRepository.Insert(new Transaction {
-                    BookingId = bookingId,
-                    TransactionStatus = "Successful",
-                    Fare = booking.Fare,
-                });
+                //_unitOfWork.TransactionRepository.Insert(new Transaction {
+                //    BookingId = bookingId,
+                //    TransactionStatus = "Successful",
+                //    Fare = booking.Fare,
+                //});
+                var newBooking = _mapper.Map<Booking>(booking);
+                _unitOfWork.BookingRepository.Update(newBooking);
                 _unitOfWork.Save();
             }
             
