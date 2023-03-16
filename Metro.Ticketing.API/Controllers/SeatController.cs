@@ -1,4 +1,5 @@
 ﻿using Metro.Ticketing.BL.Business;
+using Metro.Ticketing.Domain.Entities;
 using Metro.Ticketing.Domain.RequestDTO.Seat;
 using Metro.Ticketing.Domain.RequestDTO.Train;
 using Metro.Ticketing.Domain.ResponseDTO.Seat;
@@ -56,6 +57,12 @@ namespace Metro.Ticketing.API.Controllers
             else
                 _seatBusiness.DeleteSeat(id);
             return Ok();
+        }
+
+        [HttpGet("GetAllSeats")]
+        public IEnumerable<SeatDetails> GetAllSetaDetails()
+        {
+            return _seatBusiness.GetAllSeatDetails();
         }
     }
 }

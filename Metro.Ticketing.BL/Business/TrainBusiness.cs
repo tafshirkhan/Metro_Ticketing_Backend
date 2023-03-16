@@ -60,6 +60,24 @@ namespace Metro.Ticketing.BL.Business
             }
         }
 
+        public string UpdatesTrain(EditTrainDTO train)
+        {
+            string stCode = string.Empty;
+            try
+            {
+                var newTrain = _mapper.Map<Train>(train);
+                _unitOfWork.TrainRepository.Update(newTrain);
+                _unitOfWork.Save();
+                stCode = "200";
+            }
+            catch
+            {
+                stCode = "400";
+            }
+            return stCode;
+        }
+
+
         public void DeleteTrain(Guid trainId)
         {
             var train = GetTrainById(trainId);

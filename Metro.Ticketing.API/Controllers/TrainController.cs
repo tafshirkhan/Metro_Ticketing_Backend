@@ -20,7 +20,7 @@ namespace Metro.Ticketing.API.Controllers
             _trainBusiness = trainBusiness;
         }
 
-        [HttpGet]
+        [HttpGet("GetAll")]
         public IEnumerable<GetAllTrainDTO> GetAllTrainInfo()
         {
             return _trainBusiness.GetAllTrain();
@@ -42,7 +42,13 @@ namespace Metro.Ticketing.API.Controllers
             return Ok(_trainBusiness.UpdateTrain(train));
         }
 
-        [HttpPost]
+        [HttpPut("UpdateTrain")]
+        public IActionResult Update(EditTrainDTO train)
+        {
+            return Ok(_trainBusiness.UpdatesTrain(train));
+        }
+
+        [HttpPost("SaveTrain")]
         public IActionResult AddTrain(CreateTrainDTO train)
         {
             _trainBusiness.InsertTrain(train);

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Metro.Ticketing.Domain.Entities;
 using Metro.Ticketing.Domain.RequestDTO.Seat;
 using Metro.Ticketing.Domain.RequestDTO.Train;
 using Metro.Ticketing.Domain.ResponseDTO.Seat;
@@ -36,6 +37,24 @@ namespace Metro.Ticketing.BL.Business
             var allSeat = _unitOfWork.SeatRepository.GetAll();
             var allSeatDTO = _mapper.Map<List<GetAllSeatDTO>>(allSeat);
             return allSeatDTO;
+        }
+
+        public IEnumerable<SeatDetails> GetAllSeatDetails()
+        {
+            var train = _unitOfWork.TrainRepository.GetAll();
+            var seat = _unitOfWork.SeatRepository.GetAll();
+
+            var seatDetails = (
+                from t in train
+                join s in seat on t.TrainId equals s.TrainId
+                select new SeatDetails
+                {
+                    TrainId = t.TrainId,
+                    SeatId = s.SeatId,
+                    TrainName = t.Name,
+                    Total = s.Total
+                }).ToList();
+            return seatDetails;
         }
 
         public void InsertSeat(CreateSeatDTO seatDTO)

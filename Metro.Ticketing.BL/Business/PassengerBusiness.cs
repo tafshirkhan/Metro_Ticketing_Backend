@@ -71,25 +71,7 @@ namespace Metro.Ticketing.BL.Business
             }
         }
 
-        //[HttpGet("GetrolesCompletos")]
-        //public async Task<IActionResult> GetRolesCompletos()
-        //{
-        //    IQueryable<Rol> rol = await _unitOfWork.Rol.GetAll();
-        //    IQueryable<PermisoEnRol> permisosenrol = await _unitOfWork.PermisosEnRol.GetAll();
-        //    IQueryable<Permiso> permiso = await _unitOfWork.Permiso.GetAll();
-        //    var query = from r in rol
-        //                join pr in permisosenrol on r.IdRol equals pr.Idrol
-        //                join p in permiso on pr.IdPermiso equals p.IdPermiso
-        //                select new
-        //                {
-        //                    rol = r,
-        //                    permisosenrol = pr,
-        //                    permiso = p
-        //                };
-        //    var result = query.ToList();
-        //    return Ok(result);
-        //}
-
+        
         public IEnumerable<Report> GetReport(Guid trainId)
         {
             var passenger = _unitOfWork.PassengerRepository.GetAll();
