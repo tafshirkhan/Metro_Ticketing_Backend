@@ -38,11 +38,12 @@ namespace Metro.Ticketing.BL.Business
             return allBankCredentialDTO;
         }
 
-        public void InsertBankCredential(CreateBankCredentialDTO bankCredentialDTO)
+        public CreateBankCredentialDTO InsertBankCredential(CreateBankCredentialDTO bankCredentialDTO)
         {
             var bankCredential = _mapper.Map<BankCredential>(bankCredentialDTO);
             _unitOfWork.BankCredentialRepository.Insert(bankCredential);
             _unitOfWork.Save();
+            return bankCredentialDTO;
         }
 
         public bool UpdateBankCredential(EditBankCredentialDTO bankCredential)

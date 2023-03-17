@@ -46,7 +46,7 @@ namespace Metro.Ticketing.API.Controllers
         public IActionResult AddBankCredential(CreateBankCredentialDTO bankCredential)
         {
             _bankCredentialBusiness.InsertBankCredential(bankCredential);
-            return Ok();
+            return Ok(bankCredential);
         }
 
         [HttpDelete("{id}")]

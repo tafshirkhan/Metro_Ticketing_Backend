@@ -39,11 +39,13 @@ namespace Metro.Ticketing.BL.Business
             return allPassengerDTO;
         }
 
-        public void InsertPassenger(CreatePassengerDTO passengerDTO)
+        public CreatePassengerDTO InsertPassenger(CreatePassengerDTO passengerDTO)
         {
             var passenger = _mapper.Map<Passenger>(passengerDTO);
             _unitOfWork.PassengerRepository.Insert(passenger);
             _unitOfWork.Save();
+
+            return passengerDTO;
         }
 
         public bool UpdatePassenger(EditPassengerDTO passenger)

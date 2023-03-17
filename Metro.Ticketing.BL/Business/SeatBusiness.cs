@@ -57,11 +57,12 @@ namespace Metro.Ticketing.BL.Business
             return seatDetails;
         }
 
-        public void InsertSeat(CreateSeatDTO seatDTO)
+        public CreateSeatDTO InsertSeat(CreateSeatDTO seatDTO)
         {
             var seat = _mapper.Map<Seat>(seatDTO);
             _unitOfWork.SeatRepository.Insert(seat);
             _unitOfWork.Save();
+            return seatDTO;
         }
 
         public bool UpdateSeat(EditSeatDTO seat)

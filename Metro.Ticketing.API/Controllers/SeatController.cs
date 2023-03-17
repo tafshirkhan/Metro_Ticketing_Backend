@@ -46,7 +46,7 @@ namespace Metro.Ticketing.API.Controllers
         public IActionResult AddSeat(CreateSeatDTO seat)
         {
             _seatBusiness.InsertSeat(seat);
-            return Ok();
+            return Ok(seat);
         }
 
         [HttpDelete("{id}")]

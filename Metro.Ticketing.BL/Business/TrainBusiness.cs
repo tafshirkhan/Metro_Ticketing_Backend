@@ -38,11 +38,12 @@ namespace Metro.Ticketing.BL.Business
             return allTrainDTO;
         }
 
-        public void InsertTrain(CreateTrainDTO trainDTO)
+        public CreateTrainDTO InsertTrain(CreateTrainDTO trainDTO)
         {
             var train = _mapper.Map<Train>(trainDTO);
             _unitOfWork.TrainRepository.Insert(train);
             _unitOfWork.Save();
+            return trainDTO;
         }
 
         public bool UpdateTrain(EditTrainDTO train)

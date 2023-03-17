@@ -43,11 +43,11 @@ namespace Metro.Ticketing.API.Controllers
             return Ok(_passengerBusiness.UpdatePassenger(passenger));
         }
 
-        [HttpPost]
-        public IActionResult AddSeat(CreatePassengerDTO passenger)
+        [HttpPost("SavePassenger")]
+        public IActionResult AddPassenger(CreatePassengerDTO passenger)
         {
             _passengerBusiness.InsertPassenger(passenger);
-            return Ok();
+            return Ok(passenger);
         }
 
         [HttpDelete("{id}")]

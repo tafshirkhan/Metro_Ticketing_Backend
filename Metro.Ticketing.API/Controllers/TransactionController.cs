@@ -45,7 +45,7 @@ namespace Metro.Ticketing.API.Controllers
         public IActionResult AddTransaction(CreateTransactionDTO transaction)
         {
             _transactionBusiness.InsertTransaction(transaction);
-            return Ok();
+            return Ok(transaction);
         }
     }
 }

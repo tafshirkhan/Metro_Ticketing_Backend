@@ -46,7 +46,7 @@ namespace Metro.Ticketing.API.Controllers
         public IActionResult AddBankBooking(CreateBookingDTO booking)
         {
             _bookingBusiness.InsertBooking(booking);
-            return Ok();
+            return Ok(booking);
         }
 
         [HttpDelete("{id}")]

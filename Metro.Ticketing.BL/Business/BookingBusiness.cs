@@ -38,11 +38,12 @@ namespace Metro.Ticketing.BL.Business
             return bookingDto;
         }
 
-        public void InsertBooking(CreateBookingDTO bookingDTO)
+        public CreateBookingDTO InsertBooking(CreateBookingDTO bookingDTO)
         {
             var booking = _mapper.Map<Booking>(bookingDTO);
             _unitOfWork.BookingRepository.Insert(booking);
             _unitOfWork.Save();
+            return bookingDTO;
         }
 
         public bool UpdateBooking(EditBookingDTO booking)

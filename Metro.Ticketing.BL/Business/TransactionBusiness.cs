@@ -38,11 +38,12 @@ namespace Metro.Ticketing.BL.Business
             return transactionIdDto;
         }
 
-        public void InsertTransaction(CreateTransactionDTO transactionDTO)
+        public CreateTransactionDTO InsertTransaction(CreateTransactionDTO transactionDTO)
         {
             var transaction = _mapper.Map<Transaction>(transactionDTO);
             _unitOfWork.TransactionRepository.Insert(transaction);
             _unitOfWork.Save();
+            return transactionDTO;
         }
 
         public bool UpdateTransaction(EditTransactionDTO transaction)

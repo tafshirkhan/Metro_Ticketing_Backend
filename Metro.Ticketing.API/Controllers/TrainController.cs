@@ -52,7 +52,7 @@ namespace Metro.Ticketing.API.Controllers
         public IActionResult AddTrain(CreateTrainDTO train)
         {
             _trainBusiness.InsertTrain(train);
-            return Ok();
+            return Ok(train);
         }
 
         [HttpDelete("{id}")]
