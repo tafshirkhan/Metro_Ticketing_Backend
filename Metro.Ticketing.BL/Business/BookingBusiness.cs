@@ -3,6 +3,7 @@ using Metro.Ticketing.Domain.RequestDTO.BankCredential;
 using Metro.Ticketing.Domain.RequestDTO.Booking;
 using Metro.Ticketing.Domain.ResponseDTO.BankCredential;
 using Metro.Ticketing.Domain.ResponseDTO.Booking;
+using Metro.Ticketing.Domain.ResponseDTO.Passenger;
 using Metro.Ticketing.Infrastructure.IUnitOfWork;
 using MetroTicketing.System.Entities;
 using System;
@@ -38,6 +39,7 @@ namespace Metro.Ticketing.BL.Business
             return bookingDto;
         }
 
+
         public CreateBookingDTO InsertBooking(CreateBookingDTO bookingDTO)
         {
             var booking = _mapper.Map<Booking>(bookingDTO);
@@ -63,11 +65,18 @@ namespace Metro.Ticketing.BL.Business
 
         public void DeleteBooking(Guid bookingId)
         {
+            //var booking = GetBookingById(bookingId);
+            //if(booking != null && booking.Status != "CANCELLED")
+            //{
+            //    booking.Status = "CANCELLED";
+            //    _unitOfWork.BookingRepository.Delete(booking);
+            //    _unitOfWork.Save();
+            //}
+
             var booking = GetBookingById(bookingId);
-            if(booking != null && booking.Status != "CANCELLED")
+            if (booking != null)
             {
-                booking.Status = "CANCELLED";
-                _unitOfWork.BookingRepository.Delete(booking);
+                _unitOfWork.PassengerRepository.Delete(bookingId);
                 _unitOfWork.Save();
             }
         }
