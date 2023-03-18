@@ -8,6 +8,7 @@ namespace Metro.Ticketing.Domain.RequestDTO.BankCredential
 {
     public class CreateBankCredentialDTO
     {
+        public Guid BankCredId { get; set; }
         public Guid? UserId { get; set; }
         public string BankName { get; set; }
         public string CardNumber { get; set; }

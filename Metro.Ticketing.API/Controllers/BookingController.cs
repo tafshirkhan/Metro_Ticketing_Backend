@@ -42,8 +42,8 @@ namespace Metro.Ticketing.API.Controllers
             return Ok(_bookingBusiness.UpdateBooking(booking));
         }
 
-        [HttpPost]
-        public IActionResult AddBankBooking(CreateBookingDTO booking)
+        [HttpPost("SaveBooking")]
+        public IActionResult AddBooking(CreateBookingDTO booking)
         {
             _bookingBusiness.InsertBooking(booking);
             return Ok(booking);

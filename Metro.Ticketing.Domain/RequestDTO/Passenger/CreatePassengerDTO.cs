@@ -8,6 +8,8 @@ namespace Metro.Ticketing.Domain.RequestDTO.Passenger
 {
     public class CreatePassengerDTO
     {
+       // public Guid PassengerId { get; set; }
+
         public Guid UserId { get; set; }
 
         public string PassengerName { get; set; }

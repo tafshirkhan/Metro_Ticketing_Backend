@@ -79,7 +79,7 @@ namespace Metro.Ticketing.BL.Business
              Seat seat = _unitOfWork.SeatRepository.Get(t => t.SeatId == trainId);
             
             int totalDistance = (int)train.Distance;
-            trainFare = ((totalDistance * 20) + 150 + 50) * 0.20;
+            trainFare = ((totalDistance * 20) + 50 )* 0.20;
             //seat.Total = seat.Total - 1;
             
 
