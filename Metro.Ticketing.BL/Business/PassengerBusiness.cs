@@ -41,9 +41,10 @@ namespace Metro.Ticketing.BL.Business
 
         public CreatePassengerDTO InsertPassenger(CreatePassengerDTO passengerDTO)
         {
+            //passengerDTO.PassengerId = new Guid();
             var passenger = _mapper.Map<Passenger>(passengerDTO);
             _unitOfWork.PassengerRepository.Insert(passenger);
-            _unitOfWork.Save();
+             _unitOfWork.Save();
 
             return passengerDTO;
         }

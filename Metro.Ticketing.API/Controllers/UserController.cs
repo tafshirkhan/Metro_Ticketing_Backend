@@ -43,7 +43,7 @@ namespace Metro.Ticketing.API.Controllers
                 return BadRequest();
             return Ok(_userBusiness.UpdateUser(user));
         }
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpPost("CreateUser")]
         public IActionResult Adduser(CreateUserDTO user)
         {
@@ -61,7 +61,7 @@ namespace Metro.Ticketing.API.Controllers
             return Ok();
         }
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpPost("LoginUser")]
         public IActionResult Login(Login user)
         {
@@ -80,6 +80,20 @@ namespace Metro.Ticketing.API.Controllers
                 );
             }
             return Ok("Login failed");
+        }
+
+        [HttpPost("Login")]
+        public IActionResult LoginUser(Login user)
+        {
+            var userM = _userBusiness.GetUserByEmail(user.Email);
+            if(userM != null && user.Password == userM.Password)
+            {
+                return Ok(user);
+            }
+            else
+            {
+                return BadRequest(new { message = "Email or Password is incorrect." });
+            }
         }
     }
 }

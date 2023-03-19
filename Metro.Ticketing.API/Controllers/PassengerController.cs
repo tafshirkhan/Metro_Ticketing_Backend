@@ -46,6 +46,8 @@ namespace Metro.Ticketing.API.Controllers
         [HttpPost("SavePassenger")]
         public IActionResult AddPassenger(CreatePassengerDTO passenger)
         {
+            //Guid ok = new Guid();
+           //passenger.PassengerId = ok;
             _passengerBusiness.InsertPassenger(passenger);
             return Ok(passenger);
         }
