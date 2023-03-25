@@ -53,7 +53,7 @@ For this, you need to install the package:
 => Microsoft.Extensions.Configuration.Abstractions.
 Then we create a class with the name DbConfig in the IOC PROJECT and use the EF core service to connect our database context to the database. like this:
 
-public static class DbConfig
+    public static class DbConfig
     {
         public static IServiceCollection AddDatabaseConfig(this IServiceCollection services, IConfiguration configuration)
         {
